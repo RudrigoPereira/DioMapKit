@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YZ5-n7-2GS">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eYB-lB-qKe">
+            <objects>
+                <navigationController id="YZ5-n7-2GS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AhX-P4-Xd3">
+                        <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ax9-Kw-mmB" kind="relationship" relationship="rootViewController" id="3lv-1V-FgA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXH-Hx-ivJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-535" y="3"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Q2V-0a-kAC">
+            <objects>
+                <viewController id="Ax9-Kw-mmB" customClass="ViewController" customModule="DioMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F94-Xd-jFO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InnovationOneFoods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-3F-XMW">
+                                <rect key="frame" x="53.666666666666657" y="88" width="268" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-YH-au6">
+                                <rect key="frame" x="62.666666666666657" y="381" width="249.99999999999997" height="50"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.090196078430000007" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="aiP-hT-95i"/>
+                                    <constraint firstAttribute="height" constant="50" id="bI2-UV-qUE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pedir Minha Comida">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2S7-vA-8bD" kind="show" id="o2p-DQ-jLQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7oL-MX-bRe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LPl-3F-XMW" firstAttribute="centerY" secondItem="F94-Xd-jFO" secondAttribute="centerY" constant="-300" id="ENa-9j-NbX"/>
+                            <constraint firstItem="qC8-YH-au6" firstAttribute="centerY" secondItem="F94-Xd-jFO" secondAttribute="centerY" id="RXh-ge-bAQ"/>
+                            <constraint firstItem="LPl-3F-XMW" firstAttribute="centerX" secondItem="F94-Xd-jFO" secondAttribute="centerX" id="cwv-Jr-MQk"/>
+                            <constraint firstItem="qC8-YH-au6" firstAttribute="centerX" secondItem="F94-Xd-jFO" secondAttribute="centerX" id="gMB-rY-cDt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kdI-kB-mhv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UZ-Gq-UiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346.39999999999998" y="2.9556650246305418"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="prv-09-xQL">
+            <objects>
+                <viewController id="2S7-vA-8bD" customClass="MapsViewController" customModule="DioMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g8e-Xy-rFH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBI-6z-mUo">
+                                <rect key="frame" x="0.0" y="94" width="375" height="684"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Ux-gO-RU1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Ux-gO-RU1" firstAttribute="bottom" secondItem="nBI-6z-mUo" secondAttribute="bottom" id="Fjw-It-kF7"/>
+                            <constraint firstItem="nBI-6z-mUo" firstAttribute="top" secondItem="8Ux-gO-RU1" secondAttribute="top" id="Rb2-2f-8FW"/>
+                            <constraint firstItem="8Ux-gO-RU1" firstAttribute="trailing" secondItem="nBI-6z-mUo" secondAttribute="trailing" id="f7F-8X-4KJ"/>
+                            <constraint firstItem="nBI-6z-mUo" firstAttribute="leading" secondItem="8Ux-gO-RU1" secondAttribute="leading" id="fdh-hF-EgO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AUm-Ut-DZ2"/>
+                    <connections>
+                        <outlet property="mapView" destination="nBI-6z-mUo" id="uaK-9p-luz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jQ-xb-mGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
