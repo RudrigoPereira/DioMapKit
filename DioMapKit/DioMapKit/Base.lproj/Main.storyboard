@@ -43,7 +43,7 @@
                                 <rect key="frame" x="62.666666666666657" y="381" width="249.99999999999997" height="50"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.090196078430000007" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="aiP-hT-95i"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="aiP-hT-95i"/>
                                     <constraint firstAttribute="height" constant="50" id="bI2-UV-qUE"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -82,27 +82,84 @@
                                 <rect key="frame" x="0.0" y="94" width="375" height="684"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite um endereço" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uC-yS-17Y">
+                                <rect key="frame" x="20" y="108" width="276" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MxU-Vd-0eY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUF-hc-kbT">
+                                <rect key="frame" x="310" y="108" width="49" height="50"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="joT-7q-1Qv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GO"/>
+                                <connections>
+                                    <action selector="tappedShowAddress:" destination="2S7-vA-8bD" eventType="touchUpInside" id="aL1-3p-BXO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Ux-gO-RU1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qUF-hc-kbT" firstAttribute="leading" secondItem="5uC-yS-17Y" secondAttribute="trailing" constant="14" id="6BD-8m-BuK"/>
+                            <constraint firstItem="5uC-yS-17Y" firstAttribute="top" secondItem="8Ux-gO-RU1" secondAttribute="top" constant="14" id="DRU-QS-m9C"/>
                             <constraint firstItem="8Ux-gO-RU1" firstAttribute="bottom" secondItem="nBI-6z-mUo" secondAttribute="bottom" id="Fjw-It-kF7"/>
                             <constraint firstItem="nBI-6z-mUo" firstAttribute="top" secondItem="8Ux-gO-RU1" secondAttribute="top" id="Rb2-2f-8FW"/>
                             <constraint firstItem="8Ux-gO-RU1" firstAttribute="trailing" secondItem="nBI-6z-mUo" secondAttribute="trailing" id="f7F-8X-4KJ"/>
                             <constraint firstItem="nBI-6z-mUo" firstAttribute="leading" secondItem="8Ux-gO-RU1" secondAttribute="leading" id="fdh-hF-EgO"/>
+                            <constraint firstItem="8Ux-gO-RU1" firstAttribute="trailing" secondItem="qUF-hc-kbT" secondAttribute="trailing" constant="16" id="i5I-M2-Ije"/>
+                            <constraint firstItem="qUF-hc-kbT" firstAttribute="top" secondItem="8Ux-gO-RU1" secondAttribute="top" constant="14" id="iKj-br-z8A"/>
+                            <constraint firstItem="5uC-yS-17Y" firstAttribute="leading" secondItem="8Ux-gO-RU1" secondAttribute="leading" constant="20" id="rj4-wI-xky"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AUm-Ut-DZ2"/>
                     <connections>
+                        <outlet property="addressTextField" destination="5uC-yS-17Y" id="Kpc-3k-eaQ"/>
                         <outlet property="mapView" destination="nBI-6z-mUo" id="uaK-9p-luz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jQ-xb-mGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="3"/>
+            <point key="canvasLocation" x="1173.5999999999999" y="2.9556650246305418"/>
+        </scene>
+        <!--Addresses Table View Controller-->
+        <scene sceneID="cjS-il-tKr">
+            <objects>
+                <tableViewController storyboardIdentifier="AddressesTableViewController" id="r1h-xU-RCB" customClass="AddressesTableViewController" customModule="DioMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TZf-Xn-LMg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" id="ist-X8-3MT">
+                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ist-X8-3MT" id="RPc-AI-Zhu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r1h-xU-RCB" id="4zo-TY-AP1"/>
+                            <outlet property="delegate" destination="r1h-xU-RCB" id="ysS-oz-nrX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phd-vz-hda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034" y="3"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

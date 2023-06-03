@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4396F30D2A2A56FE008FC85E /* AddressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396F30C2A2A56FE008FC85E /* AddressesTableViewController.swift */; };
 		439C95472A1FC66A0041A593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439C95462A1FC66A0041A593 /* AppDelegate.swift */; };
 		439C95492A1FC66A0041A593 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439C95482A1FC66A0041A593 /* SceneDelegate.swift */; };
 		439C954B2A1FC66A0041A593 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439C954A2A1FC66A0041A593 /* ViewController.swift */; };
@@ -14,9 +15,11 @@
 		439C95502A1FC66B0041A593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439C954F2A1FC66B0041A593 /* Assets.xcassets */; };
 		439C95532A1FC66B0041A593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439C95512A1FC66B0041A593 /* LaunchScreen.storyboard */; };
 		439C955B2A1FC9590041A593 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439C955A2A1FC9590041A593 /* MapsViewController.swift */; };
+		43E6CEBA2A2901AA001B6FB4 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E6CEB92A2901AA001B6FB4 /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4396F30C2A2A56FE008FC85E /* AddressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTableViewController.swift; sourceTree = "<group>"; };
 		439C95432A1FC66A0041A593 /* DioMapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DioMapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439C95462A1FC66A0041A593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439C95482A1FC66A0041A593 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		439C95522A1FC66B0041A593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439C95542A1FC66B0041A593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439C955A2A1FC9590041A593 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		43E6CEB92A2901AA001B6FB4 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				439C95512A1FC66B0041A593 /* LaunchScreen.storyboard */,
 				439C95542A1FC66B0041A593 /* Info.plist */,
 				439C955A2A1FC9590041A593 /* MapsViewController.swift */,
+				43E6CEB92A2901AA001B6FB4 /* Address.swift */,
+				4396F30C2A2A56FE008FC85E /* AddressesTableViewController.swift */,
 			);
 			path = DioMapKit;
 			sourceTree = "<group>";
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4396F30D2A2A56FE008FC85E /* AddressesTableViewController.swift in Sources */,
 				439C954B2A1FC66A0041A593 /* ViewController.swift in Sources */,
 				439C95472A1FC66A0041A593 /* AppDelegate.swift in Sources */,
 				439C95492A1FC66A0041A593 /* SceneDelegate.swift in Sources */,
 				439C955B2A1FC9590041A593 /* MapsViewController.swift in Sources */,
+				43E6CEBA2A2901AA001B6FB4 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
